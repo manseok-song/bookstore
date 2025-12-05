@@ -162,3 +162,37 @@ MIT License
 ## 기여
 
 이슈 및 PR 환영합니다!
+
+## 배포
+
+### Google Cloud Platform 배포 정보
+
+- **서비스 URL**: https://pubstation-1039219401072.asia-northeast3.run.app
+- **리전**: asia-northeast3 (서울)
+- **인프라**:
+  - Cloud Run (Next.js 앱)
+  - Cloud SQL PostgreSQL 15
+  - Cloud Storage (ebooks, covers 버킷)
+  - Secret Manager
+
+### 테스트 계정
+
+- **관리자**: admin@pubstation.com / admin123
+- **일반 사용자**: user@example.com / user1234
+
+### 배포 명령어
+
+```bash
+# Cloud Run 배포
+gcloud run deploy pubstation \
+  --source . \
+  --region asia-northeast3 \
+  --platform managed \
+  --project ebookplat
+
+# 데이터베이스 마이그레이션
+DATABASE_URL="postgresql://..." npx prisma migrate deploy
+
+# Seed 데이터
+DATABASE_URL="postgresql://..." npx tsx prisma/seed.ts
+```
