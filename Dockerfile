@@ -28,17 +28,20 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # ============================================
-# Stage 3: Runner
+# Stage 3: Runner (Debian-based for Prisma compatibility)
 # ============================================
-FROM node:20-alpine AS runner
+FROM node:20-slim AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Install OpenSSL for Prisma
+RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+
 # Create non-root user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN groupadd --system --gid 1001 nodejs
+RUN useradd --system --uid 1001 --gid nodejs nextjs
 
 # Copy built assets
 COPY --from=builder /app/public ./public

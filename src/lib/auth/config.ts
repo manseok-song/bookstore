@@ -1,12 +1,12 @@
 import { PrismaAdapter } from '@auth/prisma-adapter';
-import type { NextAuthConfig, Provider } from 'next-auth';
+import type { NextAuthConfig } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import Google from 'next-auth/providers/google';
 import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/db';
 
 // 조건부로 제공자 설정
-const providers: Provider[] = [
+const providers: NextAuthConfig['providers'] = [
   Credentials({
     name: 'credentials',
     credentials: {

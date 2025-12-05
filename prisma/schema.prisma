@@ -2,6 +2,7 @@
 // 글로벌 퍼블릭 도메인 전자책 플랫폼
 
 generator client {
+  binaryTargets = ["native", "linux-musl", "debian-openssl-3.0.x"]
   provider = "prisma-client-js"
 }
 
