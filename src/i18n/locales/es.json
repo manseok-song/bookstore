@@ -1,0 +1,309 @@
+{
+  "common": {
+    "appName": "PubStation",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "submit": "Enviar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  },
+  "nav": {
+    "home": "Inicio",
+    "browse": "Explorar",
+    "library": "Mi Biblioteca",
+    "pricing": "Precios",
+    "search": "Buscar libros...",
+    "signIn": "Iniciar Sesión",
+    "signUp": "Registrarse",
+    "signOut": "Cerrar Sesión",
+    "profile": "Perfil",
+    "settings": "Configuración"
+  },
+  "home": {
+    "hero": {
+      "title": "Descubre la Literatura Clásica",
+      "subtitle": "Accede a miles de libros electrónicos gratuitos de dominio público en varios idiomas",
+      "cta": "Comenzar a Leer"
+    },
+    "featured": "Libros Destacados",
+    "popular": "Populares Esta Semana",
+    "recent": "Añadidos Recientemente",
+    "byLanguage": "Explorar por Idioma",
+    "byGenre": "Explorar por Género",
+    "stats": {
+      "books": "Libros Gratis",
+      "languages": "Idiomas",
+      "free": "Dominio Público"
+    },
+    "features": {
+      "free": {
+        "title": "Gratis para Siempre",
+        "description": "Accede a miles de clásicos de dominio público sin costo"
+      },
+      "languages": {
+        "title": "5 Idiomas",
+        "description": "Lee en inglés, coreano, chino, japonés o español"
+      },
+      "reader": {
+        "title": "Lector Integrado",
+        "description": "Lee directamente en el navegador con marcadores y sincronización de progreso"
+      }
+    },
+    "genres": {
+      "fiction": "Ficción",
+      "classic": "Clásico",
+      "mystery": "Misterio",
+      "romance": "Romance",
+      "philosophy": "Filosofía",
+      "history": "Historia"
+    },
+    "cta": {
+      "title": "¿Listo para Empezar a Leer?",
+      "description": "Únete a miles de lectores disfrutando de literatura clásica gratuita de todo el mundo."
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Iniciar Sesión",
+      "description": "Inicia sesión en tu cuenta",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar Sesión",
+      "loading": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUpLink": "Regístrate",
+      "or": "o",
+      "googleSignIn": "Iniciar sesión con Google",
+      "error": "Correo o contraseña incorrectos"
+    },
+    "signUp": {
+      "title": "Registrarse",
+      "description": "Crea una cuenta nueva para comenzar",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "submit": "Registrarse",
+      "loading": "Creando cuenta...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signInLink": "Inicia sesión",
+      "or": "o",
+      "googleSignUp": "Registrarse con Google",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "emailExists": "El correo ya está registrado"
+    }
+  },
+  "books": {
+    "readNow": "Leer Ahora",
+    "addToLibrary": "Añadir a Biblioteca",
+    "addToFavorites": "Añadir a Favoritos",
+    "removeFromFavorites": "Quitar de Favoritos",
+    "download": "Descargar EPUB",
+    "author": "Autor",
+    "genre": "Género",
+    "language": "Idioma",
+    "difficulty": "Dificultad",
+    "pages": "Páginas",
+    "published": "Publicado",
+    "description": "Descripción",
+    "similarBooks": "Libros Similares",
+    "noBooks": "No se encontraron libros"
+  },
+  "reader": {
+    "toc": "Índice",
+    "bookmarks": "Marcadores",
+    "settings": "Configuración",
+    "fontSize": "Tamaño de Fuente",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "sepia": "Sepia",
+    "progress": "Progreso",
+    "addBookmark": "Añadir Marcador",
+    "removeBookmark": "Eliminar Marcador"
+  },
+  "library": {
+    "title": "Mi Biblioteca",
+    "reading": "Leyendo",
+    "favorites": "Favoritos",
+    "completed": "Completados",
+    "empty": "Tu biblioteca está vacía",
+    "startBrowsing": "Empezar a explorar"
+  },
+  "search": {
+    "placeholder": "Buscar por título, autor o palabra clave...",
+    "results": "Resultados de Búsqueda",
+    "noResults": "No se encontraron resultados",
+    "filters": "Filtros",
+    "clearFilters": "Limpiar Filtros"
+  },
+  "pricing": {
+    "title": "Elige Tu Plan",
+    "free": {
+      "name": "Gratis",
+      "price": "$0",
+      "period": "para siempre",
+      "features": [
+        "3 libros por mes",
+        "Funciones básicas de lectura",
+        "5 idiomas soportados"
+      ],
+      "cta": "Comenzar"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$4.99",
+      "period": "por mes",
+      "features": [
+        "Libros ilimitados",
+        "Lectura sin conexión",
+        "Funciones avanzadas",
+        "Soporte prioritario",
+        "Sin anuncios"
+      ],
+      "cta": "Suscribirse Ahora"
+    }
+  },
+  "footer": {
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "copyright": "© 2024 PubStation. Todos los derechos reservados."
+  },
+  "profile": {
+    "title": "Mi Perfil",
+    "memberSince": "Miembro desde",
+    "myLibrary": "Mi Biblioteca",
+    "notSet": "No establecido"
+  },
+  "settings": {
+    "title": "Configuración",
+    "save": "Guardar Cambios",
+    "reader": {
+      "title": "Configuración del Lector",
+      "description": "Personaliza tu experiencia de lectura",
+      "theme": "Tema",
+      "themeDescription": "Elige tu tema de lectura preferido",
+      "fontSize": "Tamaño de Fuente",
+      "fontSizeDescription": "Ajusta el tamaño del texto para una lectura cómoda"
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "description": "Administra tus preferencias de notificación",
+      "email": "Notificaciones por Email",
+      "emailDescription": "Recibe actualizaciones sobre nuevos libros y funciones"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "collection": {
+        "title": "Información que Recopilamos",
+        "content": "Recopilamos información que nos proporciona directamente, como cuando crea una cuenta, actualiza su perfil o se comunica con nosotros para obtener soporte. Esto incluye su nombre, dirección de correo electrónico y preferencias de lectura."
+      },
+      "usage": {
+        "title": "Cómo Usamos su Información",
+        "content": "Usamos la información que recopilamos para proporcionar, mantener y mejorar nuestros servicios, procesar transacciones, enviarle avisos técnicos y mensajes de soporte, y responder a sus comentarios y preguntas."
+      },
+      "cookies": {
+        "title": "Cookies y Seguimiento",
+        "content": "Usamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro servicio y mantener cierta información. Puede instruir a su navegador para que rechace todas las cookies o para que indique cuándo se envía una cookie."
+      },
+      "sharing": {
+        "title": "Compartir Información",
+        "content": "No compartimos su información personal con terceros excepto como se describe en esta política. Podemos compartir información con proveedores de servicios que realizan servicios en nuestro nombre."
+      },
+      "security": {
+        "title": "Seguridad de Datos",
+        "content": "Tomamos medidas razonables para ayudar a proteger su información personal contra pérdida, robo, uso indebido, acceso no autorizado, divulgación, alteración y destrucción."
+      },
+      "contact": {
+        "title": "Contáctenos",
+        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en support@pubstation.com."
+      }
+    }
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "acceptance": {
+        "title": "Aceptación de Términos",
+        "content": "Al acceder o usar PubStation, acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo con estos términos, por favor no use nuestro servicio."
+      },
+      "service": {
+        "title": "Descripción del Servicio",
+        "content": "PubStation proporciona acceso a libros electrónicos de dominio público en múltiples idiomas. Ofrecemos niveles de suscripción gratuitos y premium con diferentes niveles de acceso y funciones."
+      },
+      "account": {
+        "title": "Cuentas de Usuario",
+        "content": "Usted es responsable de mantener la confidencialidad de sus credenciales de cuenta y de todas las actividades que ocurran bajo su cuenta. Debe notificarnos inmediatamente de cualquier uso no autorizado."
+      },
+      "content": {
+        "title": "Contenido",
+        "content": "Todos los libros disponibles en PubStation están en el dominio público. No reclamamos la propiedad de estas obras. El contenido generado por el usuario, como marcadores y progreso de lectura, sigue siendo su propiedad."
+      },
+      "intellectual": {
+        "title": "Propiedad Intelectual",
+        "content": "El servicio PubStation, incluyendo su diseño, características y funcionalidad, es de nuestra propiedad y está protegido por las leyes de propiedad intelectual. No puede copiar, modificar o distribuir nuestro servicio sin permiso."
+      },
+      "termination": {
+        "title": "Terminación",
+        "content": "Podemos terminar o suspender su cuenta en cualquier momento por cualquier razón, incluyendo violación de estos términos. Tras la terminación, su derecho a usar el servicio cesará inmediatamente."
+      },
+      "liability": {
+        "title": "Limitación de Responsabilidad",
+        "content": "PubStation se proporciona 'tal cual' sin garantías de ningún tipo. No seremos responsables de ningún daño indirecto, incidental, especial o consecuente que surja de su uso del servicio."
+      }
+    }
+  },
+  "about": {
+    "title": "Acerca de PubStation",
+    "subtitle": "Tu puerta de entrada a la literatura clásica del mundo",
+    "mission": {
+      "title": "Nuestra Misión",
+      "content": "PubStation está dedicado a hacer que la literatura clásica sea accesible para todos, independientemente del idioma o la ubicación. Creemos que los grandes libros deben estar disponibles para todos los lectores, por eso nos enfocamos en obras de dominio público que pueden compartirse y disfrutarse libremente."
+    },
+    "whyChoose": "¿Por qué elegir PubStation?",
+    "features": {
+      "books": {
+        "title": "Miles de Libros",
+        "description": "Accede a una vasta biblioteca de literatura clásica de autores renombrados de la historia."
+      },
+      "languages": {
+        "title": "Múltiples Idiomas",
+        "description": "Lee en inglés, coreano, chino, japonés o español con localización completa de la interfaz."
+      },
+      "community": {
+        "title": "Comunidad en Crecimiento",
+        "description": "Únete a lectores de todo el mundo que comparten el amor por la literatura clásica."
+      },
+      "free": {
+        "title": "Acceso Gratuito",
+        "description": "Todos los libros de dominio público están disponibles gratis, para siempre."
+      }
+    },
+    "publicDomain": {
+      "title": "Sobre el Dominio Público",
+      "content": "Las obras de dominio público son aquellas cuyos derechos de propiedad intelectual han expirado, sido renunciados o no son aplicables. Esto significa que estas obras pueden ser utilizadas, compartidas y disfrutadas libremente por cualquier persona sin permiso ni pago."
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "content": "¡Nos encantaría saber de ti! Ya sea que tengas preguntas, sugerencias o simplemente quieras saludar, no dudes en comunicarte."
+    }
+  },
+  "errors": {
+    "notFound": "Página no encontrada",
+    "serverError": "Algo salió mal",
+    "unauthorized": "Inicia sesión para continuar",
+    "forbidden": "No tienes permiso para acceder a esta página"
+  }
+}

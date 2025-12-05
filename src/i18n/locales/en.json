@@ -1,0 +1,309 @@
+{
+  "common": {
+    "appName": "PubStation",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "nav": {
+    "home": "Home",
+    "browse": "Browse",
+    "library": "My Library",
+    "pricing": "Pricing",
+    "search": "Search books...",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover Classic Literature",
+      "subtitle": "Access thousands of free public domain e-books in multiple languages",
+      "cta": "Start Reading"
+    },
+    "featured": "Featured Books",
+    "popular": "Popular This Week",
+    "recent": "Recently Added",
+    "byLanguage": "Browse by Language",
+    "byGenre": "Browse by Genre",
+    "stats": {
+      "books": "Free Books",
+      "languages": "Languages",
+      "free": "Public Domain"
+    },
+    "features": {
+      "free": {
+        "title": "Free Forever",
+        "description": "Access thousands of public domain classics at no cost"
+      },
+      "languages": {
+        "title": "5 Languages",
+        "description": "Read in English, Korean, Chinese, Japanese, or Spanish"
+      },
+      "reader": {
+        "title": "Built-in Reader",
+        "description": "Read directly in browser with bookmarks and progress sync"
+      }
+    },
+    "genres": {
+      "fiction": "Fiction",
+      "classic": "Classic",
+      "mystery": "Mystery",
+      "romance": "Romance",
+      "philosophy": "Philosophy",
+      "history": "History"
+    },
+    "cta": {
+      "title": "Ready to Start Reading?",
+      "description": "Join thousands of readers enjoying free classic literature from around the world."
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign In",
+      "description": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "loading": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "or": "or",
+      "googleSignIn": "Sign in with Google",
+      "error": "Invalid email or password"
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "description": "Create a new account to get started",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Sign Up",
+      "loading": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "or": "or",
+      "googleSignUp": "Sign up with Google",
+      "passwordMismatch": "Passwords do not match",
+      "emailExists": "Email already registered"
+    }
+  },
+  "books": {
+    "readNow": "Read Now",
+    "addToLibrary": "Add to Library",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "download": "Download EPUB",
+    "author": "Author",
+    "genre": "Genre",
+    "language": "Language",
+    "difficulty": "Difficulty",
+    "pages": "Pages",
+    "published": "Published",
+    "description": "Description",
+    "similarBooks": "Similar Books",
+    "noBooks": "No books found"
+  },
+  "reader": {
+    "toc": "Table of Contents",
+    "bookmarks": "Bookmarks",
+    "settings": "Settings",
+    "fontSize": "Font Size",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "sepia": "Sepia",
+    "progress": "Progress",
+    "addBookmark": "Add Bookmark",
+    "removeBookmark": "Remove Bookmark"
+  },
+  "library": {
+    "title": "My Library",
+    "reading": "Currently Reading",
+    "favorites": "Favorites",
+    "completed": "Completed",
+    "empty": "Your library is empty",
+    "startBrowsing": "Start browsing"
+  },
+  "search": {
+    "placeholder": "Search by title, author, or keyword...",
+    "results": "Search Results",
+    "noResults": "No results found",
+    "filters": "Filters",
+    "clearFilters": "Clear Filters"
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "features": [
+        "3 books per month",
+        "Basic reading features",
+        "5 languages supported"
+      ],
+      "cta": "Get Started"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$4.99",
+      "period": "per month",
+      "features": [
+        "Unlimited books",
+        "Offline reading",
+        "Advanced features",
+        "Priority support",
+        "No ads"
+      ],
+      "cta": "Subscribe Now"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 PubStation. All rights reserved."
+  },
+  "profile": {
+    "title": "My Profile",
+    "memberSince": "Member since",
+    "myLibrary": "My Library",
+    "notSet": "Not set"
+  },
+  "settings": {
+    "title": "Settings",
+    "save": "Save Changes",
+    "reader": {
+      "title": "Reader Settings",
+      "description": "Customize your reading experience",
+      "theme": "Theme",
+      "themeDescription": "Choose your preferred reading theme",
+      "fontSize": "Font Size",
+      "fontSizeDescription": "Adjust text size for comfortable reading"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Manage your notification preferences",
+      "email": "Email Notifications",
+      "emailDescription": "Receive updates about new books and features"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "collection": {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly to us, such as when you create an account, update your profile, or contact us for support. This includes your name, email address, and reading preferences."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to provide, maintain, and improve our services, to process transactions, to send you technical notices and support messages, and to respond to your comments and questions."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking",
+        "content": "We use cookies and similar tracking technologies to track activity on our service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
+      },
+      "sharing": {
+        "title": "Information Sharing",
+        "content": "We do not share your personal information with third parties except as described in this policy. We may share information with service providers who perform services on our behalf."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We take reasonable measures to help protect your personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about this Privacy Policy, please contact us at support@pubstation.com."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By accessing or using PubStation, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service."
+      },
+      "service": {
+        "title": "Description of Service",
+        "content": "PubStation provides access to public domain e-books in multiple languages. We offer both free and premium subscription tiers with varying levels of access and features."
+      },
+      "account": {
+        "title": "User Accounts",
+        "content": "You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You must notify us immediately of any unauthorized use."
+      },
+      "content": {
+        "title": "Content",
+        "content": "All books available on PubStation are in the public domain. We do not claim ownership of these works. User-generated content such as bookmarks and reading progress remains your property."
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "content": "The PubStation service, including its design, features, and functionality, is owned by us and is protected by intellectual property laws. You may not copy, modify, or distribute our service without permission."
+      },
+      "termination": {
+        "title": "Termination",
+        "content": "We may terminate or suspend your account at any time for any reason, including violation of these terms. Upon termination, your right to use the service will immediately cease."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "PubStation is provided 'as is' without warranties of any kind. We shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service."
+      }
+    }
+  },
+  "about": {
+    "title": "About PubStation",
+    "subtitle": "Your gateway to classic literature from around the world",
+    "mission": {
+      "title": "Our Mission",
+      "content": "PubStation is dedicated to making classic literature accessible to everyone, regardless of language or location. We believe that great books should be available to all readers, which is why we focus on public domain works that can be freely shared and enjoyed."
+    },
+    "whyChoose": "Why Choose PubStation?",
+    "features": {
+      "books": {
+        "title": "Thousands of Books",
+        "description": "Access a vast library of classic literature from renowned authors throughout history."
+      },
+      "languages": {
+        "title": "Multiple Languages",
+        "description": "Read in English, Korean, Chinese, Japanese, or Spanish with full interface localization."
+      },
+      "community": {
+        "title": "Growing Community",
+        "description": "Join readers from around the world who share a love for classic literature."
+      },
+      "free": {
+        "title": "Free Access",
+        "description": "All public domain books are available for free, forever."
+      }
+    },
+    "publicDomain": {
+      "title": "About Public Domain",
+      "content": "Public domain works are those whose intellectual property rights have expired, been forfeited, or are inapplicable. This means these works can be freely used, shared, and enjoyed by anyone without permission or payment."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "We'd love to hear from you! Whether you have questions, suggestions, or just want to say hello, feel free to reach out."
+    }
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "serverError": "Something went wrong",
+    "unauthorized": "Please sign in to continue",
+    "forbidden": "You don't have permission to access this page"
+  }
+}

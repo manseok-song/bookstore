@@ -1,0 +1,309 @@
+{
+  "common": {
+    "appName": "PubStation",
+    "loading": "加载中...",
+    "error": "发生错误",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "search": "搜索",
+    "submit": "提交",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步"
+  },
+  "nav": {
+    "home": "首页",
+    "browse": "浏览",
+    "library": "我的书架",
+    "pricing": "价格",
+    "search": "搜索书籍...",
+    "signIn": "登录",
+    "signUp": "注册",
+    "signOut": "退出",
+    "profile": "个人资料",
+    "settings": "设置"
+  },
+  "home": {
+    "hero": {
+      "title": "探索经典文学",
+      "subtitle": "访问数千本多语言免费公共领域电子书",
+      "cta": "开始阅读"
+    },
+    "featured": "精选书籍",
+    "popular": "本周热门",
+    "recent": "最新添加",
+    "byLanguage": "按语言浏览",
+    "byGenre": "按类型浏览",
+    "stats": {
+      "books": "免费书籍",
+      "languages": "支持语言",
+      "free": "公共领域"
+    },
+    "features": {
+      "free": {
+        "title": "永久免费",
+        "description": "免费访问数千本公共领域经典作品"
+      },
+      "languages": {
+        "title": "5种语言",
+        "description": "支持英语、韩语、中文、日语和西班牙语"
+      },
+      "reader": {
+        "title": "内置阅读器",
+        "description": "在浏览器中直接阅读，支持书签和进度同步"
+      }
+    },
+    "genres": {
+      "fiction": "小说",
+      "classic": "经典",
+      "mystery": "悬疑",
+      "romance": "爱情",
+      "philosophy": "哲学",
+      "history": "历史"
+    },
+    "cta": {
+      "title": "准备好开始阅读了吗？",
+      "description": "加入数千名读者，享受来自世界各地的免费经典文学。"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "登录",
+      "description": "登录您的账户",
+      "email": "邮箱",
+      "password": "密码",
+      "submit": "登录",
+      "loading": "登录中...",
+      "noAccount": "还没有账户？",
+      "signUpLink": "注册",
+      "or": "或",
+      "googleSignIn": "使用 Google 登录",
+      "error": "邮箱或密码错误"
+    },
+    "signUp": {
+      "title": "注册",
+      "description": "创建新账户开始使用",
+      "name": "姓名",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "注册",
+      "loading": "注册中...",
+      "hasAccount": "已有账户？",
+      "signInLink": "登录",
+      "or": "或",
+      "googleSignUp": "使用 Google 注册",
+      "passwordMismatch": "密码不匹配",
+      "emailExists": "邮箱已被注册"
+    }
+  },
+  "books": {
+    "readNow": "立即阅读",
+    "addToLibrary": "添加到书架",
+    "addToFavorites": "添加收藏",
+    "removeFromFavorites": "取消收藏",
+    "download": "下载 EPUB",
+    "author": "作者",
+    "genre": "类型",
+    "language": "语言",
+    "difficulty": "难度",
+    "pages": "页数",
+    "published": "出版年份",
+    "description": "简介",
+    "similarBooks": "相似书籍",
+    "noBooks": "未找到书籍"
+  },
+  "reader": {
+    "toc": "目录",
+    "bookmarks": "书签",
+    "settings": "设置",
+    "fontSize": "字体大小",
+    "theme": "主题",
+    "light": "浅色",
+    "dark": "深色",
+    "sepia": "护眼",
+    "progress": "进度",
+    "addBookmark": "添加书签",
+    "removeBookmark": "删除书签"
+  },
+  "library": {
+    "title": "我的书架",
+    "reading": "正在阅读",
+    "favorites": "收藏",
+    "completed": "已读完",
+    "empty": "书架是空的",
+    "startBrowsing": "开始浏览"
+  },
+  "search": {
+    "placeholder": "按书名、作者或关键词搜索...",
+    "results": "搜索结果",
+    "noResults": "未找到结果",
+    "filters": "筛选",
+    "clearFilters": "清除筛选"
+  },
+  "pricing": {
+    "title": "选择方案",
+    "free": {
+      "name": "免费",
+      "price": "¥0",
+      "period": "永久",
+      "features": [
+        "每月3本书",
+        "基础阅读功能",
+        "支持5种语言"
+      ],
+      "cta": "开始使用"
+    },
+    "premium": {
+      "name": "高级版",
+      "price": "¥35",
+      "period": "每月",
+      "features": [
+        "无限书籍",
+        "离线阅读",
+        "高级功能",
+        "优先支持",
+        "无广告"
+      ],
+      "cta": "立即订阅"
+    }
+  },
+  "footer": {
+    "about": "关于我们",
+    "contact": "联系我们",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© 2024 PubStation. 保留所有权利。"
+  },
+  "profile": {
+    "title": "我的资料",
+    "memberSince": "注册时间",
+    "myLibrary": "我的书架",
+    "notSet": "未设置"
+  },
+  "settings": {
+    "title": "设置",
+    "save": "保存更改",
+    "reader": {
+      "title": "阅读器设置",
+      "description": "自定义您的阅读体验",
+      "theme": "主题",
+      "themeDescription": "选择您喜欢的阅读主题",
+      "fontSize": "字体大小",
+      "fontSizeDescription": "调整文字大小以便舒适阅读"
+    },
+    "notifications": {
+      "title": "通知",
+      "description": "管理您的通知偏好",
+      "email": "邮件通知",
+      "emailDescription": "接收新书和功能更新"
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新",
+    "sections": {
+      "collection": {
+        "title": "我们收集的信息",
+        "content": "我们收集您直接提供给我们的信息，例如创建账户、更新个人资料或联系我们寻求支持时。这包括您的姓名、电子邮件地址和阅读偏好。"
+      },
+      "usage": {
+        "title": "我们如何使用您的信息",
+        "content": "我们使用收集的信息来提供、维护和改进我们的服务，处理交易，发送技术通知和支持消息，以及回复您的评论和问题。"
+      },
+      "cookies": {
+        "title": "Cookie和追踪",
+        "content": "我们使用cookie和类似的追踪技术来追踪我们服务上的活动并保留某些信息。您可以指示浏览器拒绝所有cookie或在发送cookie时提示您。"
+      },
+      "sharing": {
+        "title": "信息共享",
+        "content": "除本政策中描述的情况外，我们不会与第三方共享您的个人信息。我们可能会与代表我们执行服务的服务提供商共享信息。"
+      },
+      "security": {
+        "title": "数据安全",
+        "content": "我们采取合理措施帮助保护您的个人信息免受丢失、盗窃、滥用、未经授权的访问、披露、更改和破坏。"
+      },
+      "contact": {
+        "title": "联系我们",
+        "content": "如果您对本隐私政策有任何疑问，请通过support@pubstation.com与我们联系。"
+      }
+    }
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新",
+    "sections": {
+      "acceptance": {
+        "title": "接受条款",
+        "content": "通过访问或使用PubStation，您同意受这些服务条款的约束。如果您不同意这些条款，请不要使用我们的服务。"
+      },
+      "service": {
+        "title": "服务描述",
+        "content": "PubStation提供多语言公共领域电子书访问。我们提供免费和付费订阅层级，具有不同级别的访问权限和功能。"
+      },
+      "account": {
+        "title": "用户账户",
+        "content": "您有责任维护账户凭证的机密性以及账户下发生的所有活动。您必须立即通知我们任何未经授权的使用。"
+      },
+      "content": {
+        "title": "内容",
+        "content": "PubStation上的所有书籍都属于公共领域。我们不主张这些作品的所有权。书签和阅读进度等用户生成的内容仍然是您的财产。"
+      },
+      "intellectual": {
+        "title": "知识产权",
+        "content": "PubStation服务，包括其设计、功能和功能性，归我们所有，受知识产权法保护。未经许可，您不得复制、修改或分发我们的服务。"
+      },
+      "termination": {
+        "title": "终止",
+        "content": "我们可能会因任何原因（包括违反这些条款）随时终止或暂停您的账户。终止后，您使用服务的权利将立即停止。"
+      },
+      "liability": {
+        "title": "责任限制",
+        "content": "PubStation按「原样」提供，不提供任何形式的保证。我们不对因使用服务而产生的任何间接、附带、特殊或后果性损害承担责任。"
+      }
+    }
+  },
+  "about": {
+    "title": "关于PubStation",
+    "subtitle": "您通往世界经典文学的门户",
+    "mission": {
+      "title": "我们的使命",
+      "content": "PubStation致力于让每个人都能接触到经典文学，无论语言或地点如何。我们相信优秀的书籍应该向所有读者开放，这就是为什么我们专注于可以自由分享和享用的公共领域作品。"
+    },
+    "whyChoose": "为什么选择PubStation？",
+    "features": {
+      "books": {
+        "title": "数千本书籍",
+        "description": "访问历史上著名作家的大量经典文学图书馆。"
+      },
+      "languages": {
+        "title": "多语言支持",
+        "description": "使用英语、韩语、中文、日语或西班牙语阅读，界面完全本地化。"
+      },
+      "community": {
+        "title": "不断成长的社区",
+        "description": "加入来自世界各地热爱经典文学的读者。"
+      },
+      "free": {
+        "title": "免费访问",
+        "description": "所有公共领域书籍永久免费提供。"
+      }
+    },
+    "publicDomain": {
+      "title": "关于公共领域",
+      "content": "公共领域作品是指知识产权已过期、被放弃或不适用的作品。这意味着这些作品可以被任何人自由使用、分享和享用，无需许可或付费。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "content": "我们很乐意听到您的声音！无论您有问题、建议，还是只是想打个招呼，请随时联系我们。"
+    }
+  },
+  "errors": {
+    "notFound": "页面未找到",
+    "serverError": "出了点问题",
+    "unauthorized": "请登录后继续",
+    "forbidden": "您没有权限访问此页面"
+  }
+}

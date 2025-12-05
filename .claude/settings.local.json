@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npx create-next-app@latest pubstation-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-pnpm --turbo)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(npm run build:*)",
+      "Bash(cat:*)",
+      "WebFetch(domain:www.gutenberg.org)",
+      "Bash(curl:*)",
+      "Bash(timeout 3 npm run dev:*)",
+      "Bash(find:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npx ts-node:*)",
+      "Bash(npx tsc:*)",
+      "Bash(pnpm add:*)",
+      "Bash(timeout 5 npm run dev)",
+      "Bash(npm run dev:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

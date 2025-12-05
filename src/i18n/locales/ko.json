@@ -1,0 +1,309 @@
+{
+  "common": {
+    "appName": "PubStation",
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "수정",
+    "search": "검색",
+    "submit": "제출",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전"
+  },
+  "nav": {
+    "home": "홈",
+    "browse": "탐색",
+    "library": "내 서재",
+    "pricing": "요금제",
+    "search": "책 검색...",
+    "signIn": "로그인",
+    "signUp": "회원가입",
+    "signOut": "로그아웃",
+    "profile": "프로필",
+    "settings": "설정"
+  },
+  "home": {
+    "hero": {
+      "title": "고전 문학의 세계로",
+      "subtitle": "다양한 언어로 된 수천 권의 무료 퍼블릭 도메인 전자책을 만나보세요",
+      "cta": "읽기 시작하기"
+    },
+    "featured": "추천 도서",
+    "popular": "이번 주 인기 도서",
+    "recent": "최근 추가된 도서",
+    "byLanguage": "언어별 탐색",
+    "byGenre": "장르별 탐색",
+    "stats": {
+      "books": "무료 도서",
+      "languages": "지원 언어",
+      "free": "퍼블릭 도메인"
+    },
+    "features": {
+      "free": {
+        "title": "영원히 무료",
+        "description": "수천 권의 퍼블릭 도메인 고전을 무료로 이용하세요"
+      },
+      "languages": {
+        "title": "5개 언어 지원",
+        "description": "영어, 한국어, 중국어, 일본어, 스페인어로 읽으세요"
+      },
+      "reader": {
+        "title": "내장 리더",
+        "description": "북마크와 진행률 동기화로 브라우저에서 바로 읽으세요"
+      }
+    },
+    "genres": {
+      "fiction": "소설",
+      "classic": "고전",
+      "mystery": "미스터리",
+      "romance": "로맨스",
+      "philosophy": "철학",
+      "history": "역사"
+    },
+    "cta": {
+      "title": "읽을 준비 되셨나요?",
+      "description": "전 세계의 무료 고전 문학을 즐기는 수천 명의 독자와 함께하세요."
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "로그인",
+      "description": "계정에 로그인하세요",
+      "email": "이메일",
+      "password": "비밀번호",
+      "submit": "로그인",
+      "loading": "로그인 중...",
+      "noAccount": "계정이 없으신가요?",
+      "signUpLink": "회원가입",
+      "or": "또는",
+      "googleSignIn": "Google로 로그인",
+      "error": "이메일 또는 비밀번호가 올바르지 않습니다"
+    },
+    "signUp": {
+      "title": "회원가입",
+      "description": "새 계정을 만들어 시작하세요",
+      "name": "이름",
+      "email": "이메일",
+      "password": "비밀번호",
+      "confirmPassword": "비밀번호 확인",
+      "submit": "회원가입",
+      "loading": "가입 중...",
+      "hasAccount": "이미 계정이 있으신가요?",
+      "signInLink": "로그인",
+      "or": "또는",
+      "googleSignUp": "Google로 시작하기",
+      "passwordMismatch": "비밀번호가 일치하지 않습니다",
+      "emailExists": "이미 등록된 이메일입니다"
+    }
+  },
+  "books": {
+    "readNow": "지금 읽기",
+    "addToLibrary": "서재에 추가",
+    "addToFavorites": "즐겨찾기 추가",
+    "removeFromFavorites": "즐겨찾기 해제",
+    "download": "EPUB 다운로드",
+    "author": "저자",
+    "genre": "장르",
+    "language": "언어",
+    "difficulty": "난이도",
+    "pages": "페이지",
+    "published": "출판년도",
+    "description": "설명",
+    "similarBooks": "비슷한 도서",
+    "noBooks": "책을 찾을 수 없습니다"
+  },
+  "reader": {
+    "toc": "목차",
+    "bookmarks": "북마크",
+    "settings": "설정",
+    "fontSize": "글자 크기",
+    "theme": "테마",
+    "light": "밝은",
+    "dark": "어두운",
+    "sepia": "세피아",
+    "progress": "진행률",
+    "addBookmark": "북마크 추가",
+    "removeBookmark": "북마크 삭제"
+  },
+  "library": {
+    "title": "내 서재",
+    "reading": "읽는 중",
+    "favorites": "즐겨찾기",
+    "completed": "완독",
+    "empty": "서재가 비어 있습니다",
+    "startBrowsing": "탐색 시작하기"
+  },
+  "search": {
+    "placeholder": "제목, 저자, 키워드로 검색...",
+    "results": "검색 결과",
+    "noResults": "검색 결과가 없습니다",
+    "filters": "필터",
+    "clearFilters": "필터 초기화"
+  },
+  "pricing": {
+    "title": "요금제 선택",
+    "free": {
+      "name": "무료",
+      "price": "₩0",
+      "period": "영구",
+      "features": [
+        "월 3권 읽기",
+        "기본 읽기 기능",
+        "5개 언어 지원"
+      ],
+      "cta": "시작하기"
+    },
+    "premium": {
+      "name": "프리미엄",
+      "price": "₩5,900",
+      "period": "월",
+      "features": [
+        "무제한 도서",
+        "오프라인 읽기",
+        "고급 기능",
+        "우선 지원",
+        "광고 없음"
+      ],
+      "cta": "구독하기"
+    }
+  },
+  "footer": {
+    "about": "소개",
+    "contact": "문의",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관",
+    "copyright": "© 2024 PubStation. All rights reserved."
+  },
+  "profile": {
+    "title": "내 프로필",
+    "memberSince": "가입일",
+    "myLibrary": "내 서재",
+    "notSet": "설정되지 않음"
+  },
+  "settings": {
+    "title": "설정",
+    "save": "변경사항 저장",
+    "reader": {
+      "title": "리더 설정",
+      "description": "독서 환경을 맞춤 설정하세요",
+      "theme": "테마",
+      "themeDescription": "선호하는 읽기 테마를 선택하세요",
+      "fontSize": "글꼴 크기",
+      "fontSizeDescription": "편안한 독서를 위해 글자 크기를 조절하세요"
+    },
+    "notifications": {
+      "title": "알림",
+      "description": "알림 설정을 관리하세요",
+      "email": "이메일 알림",
+      "emailDescription": "새 책과 기능에 대한 업데이트를 받아보세요"
+    }
+  },
+  "privacy": {
+    "title": "개인정보처리방침",
+    "lastUpdated": "최종 수정일",
+    "sections": {
+      "collection": {
+        "title": "수집하는 정보",
+        "content": "계정 생성, 프로필 업데이트, 지원 문의 시 직접 제공하는 정보를 수집합니다. 여기에는 이름, 이메일 주소, 읽기 환경 설정이 포함됩니다."
+      },
+      "usage": {
+        "title": "정보 사용 방법",
+        "content": "수집한 정보는 서비스 제공, 유지 및 개선, 거래 처리, 기술 공지 및 지원 메시지 전송, 의견 및 질문에 대한 응답에 사용됩니다."
+      },
+      "cookies": {
+        "title": "쿠키 및 추적",
+        "content": "서비스 활동을 추적하고 특정 정보를 보유하기 위해 쿠키 및 유사한 추적 기술을 사용합니다. 브라우저에서 모든 쿠키를 거부하거나 쿠키가 전송될 때 알림을 받도록 설정할 수 있습니다."
+      },
+      "sharing": {
+        "title": "정보 공유",
+        "content": "본 방침에 설명된 경우를 제외하고 개인정보를 제3자와 공유하지 않습니다. 당사를 대신하여 서비스를 수행하는 서비스 제공업체와 정보를 공유할 수 있습니다."
+      },
+      "security": {
+        "title": "데이터 보안",
+        "content": "개인정보를 분실, 도난, 오용, 무단 접근, 공개, 변경 및 파괴로부터 보호하기 위해 합리적인 조치를 취합니다."
+      },
+      "contact": {
+        "title": "문의하기",
+        "content": "본 개인정보처리방침에 대해 질문이 있으시면 support@pubstation.com으로 연락해 주세요."
+      }
+    }
+  },
+  "terms": {
+    "title": "이용약관",
+    "lastUpdated": "최종 수정일",
+    "sections": {
+      "acceptance": {
+        "title": "약관 동의",
+        "content": "PubStation에 접속하거나 사용함으로써 본 이용약관에 동의하게 됩니다. 이 약관에 동의하지 않으시면 서비스를 사용하지 마세요."
+      },
+      "service": {
+        "title": "서비스 설명",
+        "content": "PubStation은 다국어로 된 퍼블릭 도메인 전자책에 대한 접근을 제공합니다. 다양한 수준의 접근과 기능을 제공하는 무료 및 프리미엄 구독 등급을 제공합니다."
+      },
+      "account": {
+        "title": "사용자 계정",
+        "content": "계정 자격 증명의 기밀을 유지하고 계정에서 발생하는 모든 활동에 대한 책임이 있습니다. 무단 사용을 발견하면 즉시 알려주셔야 합니다."
+      },
+      "content": {
+        "title": "콘텐츠",
+        "content": "PubStation에서 제공하는 모든 책은 퍼블릭 도메인에 있습니다. 이 작품들의 소유권을 주장하지 않습니다. 북마크 및 읽기 진행률과 같은 사용자 생성 콘텐츠는 귀하의 자산으로 유지됩니다."
+      },
+      "intellectual": {
+        "title": "지적 재산권",
+        "content": "디자인, 기능 및 기능성을 포함한 PubStation 서비스는 당사가 소유하며 지적 재산권법에 의해 보호됩니다. 허가 없이 서비스를 복사, 수정 또는 배포할 수 없습니다."
+      },
+      "termination": {
+        "title": "종료",
+        "content": "어떤 이유로든, 약관 위반을 포함하여 언제든지 계정을 종료하거나 일시 중지할 수 있습니다. 종료 시 서비스 사용 권한이 즉시 중단됩니다."
+      },
+      "liability": {
+        "title": "책임 제한",
+        "content": "PubStation은 어떠한 종류의 보증 없이 '있는 그대로' 제공됩니다. 서비스 사용으로 인해 발생하는 간접적, 부수적, 특별 또는 결과적 손해에 대해 책임지지 않습니다."
+      }
+    }
+  },
+  "about": {
+    "title": "PubStation 소개",
+    "subtitle": "전 세계 고전 문학으로 가는 관문",
+    "mission": {
+      "title": "우리의 미션",
+      "content": "PubStation은 언어나 위치에 관계없이 모든 사람이 고전 문학에 접근할 수 있도록 하는 데 전념합니다. 훌륭한 책은 모든 독자에게 제공되어야 한다고 믿기에, 자유롭게 공유하고 즐길 수 있는 퍼블릭 도메인 작품에 집중합니다."
+    },
+    "whyChoose": "왜 PubStation인가요?",
+    "features": {
+      "books": {
+        "title": "수천 권의 책",
+        "description": "역사상 유명한 작가들의 방대한 고전 문학 라이브러리에 접근하세요."
+      },
+      "languages": {
+        "title": "다국어 지원",
+        "description": "영어, 한국어, 중국어, 일본어, 스페인어로 완전히 현지화된 인터페이스로 읽으세요."
+      },
+      "community": {
+        "title": "성장하는 커뮤니티",
+        "description": "고전 문학에 대한 사랑을 공유하는 전 세계 독자들과 함께하세요."
+      },
+      "free": {
+        "title": "무료 접근",
+        "description": "모든 퍼블릭 도메인 책은 영원히 무료로 이용할 수 있습니다."
+      }
+    },
+    "publicDomain": {
+      "title": "퍼블릭 도메인에 대하여",
+      "content": "퍼블릭 도메인 작품은 지적 재산권이 만료되었거나, 포기되었거나, 적용되지 않는 작품입니다. 이는 이러한 작품을 허가나 비용 없이 누구나 자유롭게 사용, 공유, 즐길 수 있음을 의미합니다."
+    },
+    "contact": {
+      "title": "문의하기",
+      "content": "여러분의 의견을 듣고 싶습니다! 질문, 제안, 또는 인사를 전하고 싶으시다면 언제든지 연락해 주세요."
+    }
+  },
+  "errors": {
+    "notFound": "페이지를 찾을 수 없습니다",
+    "serverError": "문제가 발생했습니다",
+    "unauthorized": "계속하려면 로그인하세요",
+    "forbidden": "이 페이지에 접근할 권한이 없습니다"
+  }
+}

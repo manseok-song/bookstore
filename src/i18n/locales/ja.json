@@ -1,0 +1,309 @@
+{
+  "common": {
+    "appName": "PubStation",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "search": "検索",
+    "submit": "送信",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ"
+  },
+  "nav": {
+    "home": "ホーム",
+    "browse": "探す",
+    "library": "マイライブラリ",
+    "pricing": "料金",
+    "search": "本を検索...",
+    "signIn": "ログイン",
+    "signUp": "新規登録",
+    "signOut": "ログアウト",
+    "profile": "プロフィール",
+    "settings": "設定"
+  },
+  "home": {
+    "hero": {
+      "title": "古典文学を発見",
+      "subtitle": "多言語で数千冊の無料パブリックドメイン電子書籍にアクセス",
+      "cta": "読み始める"
+    },
+    "featured": "おすすめの本",
+    "popular": "今週の人気",
+    "recent": "最近追加",
+    "byLanguage": "言語で探す",
+    "byGenre": "ジャンルで探す",
+    "stats": {
+      "books": "無料の本",
+      "languages": "対応言語",
+      "free": "パブリックドメイン"
+    },
+    "features": {
+      "free": {
+        "title": "永久無料",
+        "description": "数千冊のパブリックドメイン古典を無料で読めます"
+      },
+      "languages": {
+        "title": "5言語対応",
+        "description": "英語、韓国語、中国語、日本語、スペイン語で読める"
+      },
+      "reader": {
+        "title": "内蔵リーダー",
+        "description": "ブックマークと進捗同期でブラウザで直接読める"
+      }
+    },
+    "genres": {
+      "fiction": "小説",
+      "classic": "古典",
+      "mystery": "ミステリー",
+      "romance": "恋愛",
+      "philosophy": "哲学",
+      "history": "歴史"
+    },
+    "cta": {
+      "title": "読む準備はできましたか？",
+      "description": "世界中の無料古典文学を楽しむ数千人の読者に加わりましょう。"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "ログイン",
+      "description": "アカウントにログイン",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "submit": "ログイン",
+      "loading": "ログイン中...",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUpLink": "新規登録",
+      "or": "または",
+      "googleSignIn": "Googleでログイン",
+      "error": "メールアドレスまたはパスワードが正しくありません"
+    },
+    "signUp": {
+      "title": "新規登録",
+      "description": "新しいアカウントを作成",
+      "name": "名前",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirmPassword": "パスワード確認",
+      "submit": "登録",
+      "loading": "登録中...",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "signInLink": "ログイン",
+      "or": "または",
+      "googleSignUp": "Googleで登録",
+      "passwordMismatch": "パスワードが一致しません",
+      "emailExists": "このメールアドレスは既に登録されています"
+    }
+  },
+  "books": {
+    "readNow": "今すぐ読む",
+    "addToLibrary": "ライブラリに追加",
+    "addToFavorites": "お気に入りに追加",
+    "removeFromFavorites": "お気に入りから削除",
+    "download": "EPUBダウンロード",
+    "author": "著者",
+    "genre": "ジャンル",
+    "language": "言語",
+    "difficulty": "難易度",
+    "pages": "ページ数",
+    "published": "出版年",
+    "description": "説明",
+    "similarBooks": "似た本",
+    "noBooks": "本が見つかりません"
+  },
+  "reader": {
+    "toc": "目次",
+    "bookmarks": "ブックマーク",
+    "settings": "設定",
+    "fontSize": "文字サイズ",
+    "theme": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "sepia": "セピア",
+    "progress": "進捗",
+    "addBookmark": "ブックマークを追加",
+    "removeBookmark": "ブックマークを削除"
+  },
+  "library": {
+    "title": "マイライブラリ",
+    "reading": "読書中",
+    "favorites": "お気に入り",
+    "completed": "読了",
+    "empty": "ライブラリは空です",
+    "startBrowsing": "探し始める"
+  },
+  "search": {
+    "placeholder": "タイトル、著者、キーワードで検索...",
+    "results": "検索結果",
+    "noResults": "結果が見つかりません",
+    "filters": "フィルター",
+    "clearFilters": "フィルターをクリア"
+  },
+  "pricing": {
+    "title": "プランを選択",
+    "free": {
+      "name": "無料",
+      "price": "¥0",
+      "period": "永久",
+      "features": [
+        "月3冊まで",
+        "基本的な読書機能",
+        "5言語対応"
+      ],
+      "cta": "始める"
+    },
+    "premium": {
+      "name": "プレミアム",
+      "price": "¥700",
+      "period": "月額",
+      "features": [
+        "無制限の本",
+        "オフライン読書",
+        "高度な機能",
+        "優先サポート",
+        "広告なし"
+      ],
+      "cta": "今すぐ購読"
+    }
+  },
+  "footer": {
+    "about": "について",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© 2024 PubStation. All rights reserved."
+  },
+  "profile": {
+    "title": "マイプロフィール",
+    "memberSince": "登録日",
+    "myLibrary": "マイライブラリ",
+    "notSet": "未設定"
+  },
+  "settings": {
+    "title": "設定",
+    "save": "変更を保存",
+    "reader": {
+      "title": "リーダー設定",
+      "description": "読書体験をカスタマイズ",
+      "theme": "テーマ",
+      "themeDescription": "お好みの読書テーマを選択",
+      "fontSize": "フォントサイズ",
+      "fontSizeDescription": "快適な読書のためにテキストサイズを調整"
+    },
+    "notifications": {
+      "title": "通知",
+      "description": "通知設定を管理",
+      "email": "メール通知",
+      "emailDescription": "新しい本や機能のアップデートを受け取る"
+    }
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日",
+    "sections": {
+      "collection": {
+        "title": "収集する情報",
+        "content": "アカウントの作成、プロフィールの更新、サポートへの問い合わせなど、直接提供される情報を収集します。これには、お名前、メールアドレス、読書設定が含まれます。"
+      },
+      "usage": {
+        "title": "情報の使用方法",
+        "content": "収集した情報は、サービスの提供、維持、改善、取引の処理、技術通知とサポートメッセージの送信、コメントや質問への回答に使用します。"
+      },
+      "cookies": {
+        "title": "Cookieとトラッキング",
+        "content": "サービス上の活動を追跡し、特定の情報を保持するために、Cookieおよび同様のトラッキング技術を使用します。ブラウザですべてのCookieを拒否するか、Cookieが送信されるときに通知を受けるよう設定できます。"
+      },
+      "sharing": {
+        "title": "情報の共有",
+        "content": "このポリシーに記載されている場合を除き、個人情報を第三者と共有しません。当社に代わってサービスを実行するサービスプロバイダーと情報を共有する場合があります。"
+      },
+      "security": {
+        "title": "データセキュリティ",
+        "content": "個人情報を紛失、盗難、悪用、不正アクセス、開示、変更、破壊から保護するための合理的な措置を講じています。"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "content": "このプライバシーポリシーについてご質問がある場合は、support@pubstation.comまでご連絡ください。"
+      }
+    }
+  },
+  "terms": {
+    "title": "利用規約",
+    "lastUpdated": "最終更新日",
+    "sections": {
+      "acceptance": {
+        "title": "規約への同意",
+        "content": "PubStationにアクセスまたは使用することで、この利用規約に同意したものとみなされます。これらの規約に同意しない場合は、サービスを使用しないでください。"
+      },
+      "service": {
+        "title": "サービスの説明",
+        "content": "PubStationは、多言語のパブリックドメイン電子書籍へのアクセスを提供します。異なるレベルのアクセスと機能を持つ無料およびプレミアムサブスクリプション層を提供しています。"
+      },
+      "account": {
+        "title": "ユーザーアカウント",
+        "content": "アカウント認証情報の機密性を維持し、アカウントで発生するすべての活動について責任を負います。不正使用があった場合は、直ちにお知らせください。"
+      },
+      "content": {
+        "title": "コンテンツ",
+        "content": "PubStationで利用可能なすべての本はパブリックドメインにあります。これらの作品の所有権を主張しません。ブックマークや読書進捗などのユーザー生成コンテンツはお客様の財産です。"
+      },
+      "intellectual": {
+        "title": "知的財産権",
+        "content": "PubStationサービス（デザイン、機能、機能性を含む）は当社が所有し、知的財産法によって保護されています。許可なくサービスをコピー、変更、配布することはできません。"
+      },
+      "termination": {
+        "title": "終了",
+        "content": "規約違反を含むあらゆる理由により、いつでもアカウントを終了または停止する場合があります。終了時、サービスを使用する権利は直ちに停止します。"
+      },
+      "liability": {
+        "title": "責任の制限",
+        "content": "PubStationはいかなる種類の保証もなく「現状のまま」提供されます。サービスの使用から生じる間接的、付随的、特別、または結果的な損害について責任を負いません。"
+      }
+    }
+  },
+  "about": {
+    "title": "PubStationについて",
+    "subtitle": "世界の古典文学への入り口",
+    "mission": {
+      "title": "私たちのミッション",
+      "content": "PubStationは、言語や場所に関係なく、誰もが古典文学にアクセスできるようにすることに専念しています。優れた本はすべての読者に提供されるべきだと信じているため、自由に共有して楽しめるパブリックドメインの作品に焦点を当てています。"
+    },
+    "whyChoose": "なぜPubStationを選ぶのか？",
+    "features": {
+      "books": {
+        "title": "数千冊の本",
+        "description": "歴史上の著名な作家による膨大な古典文学ライブラリにアクセス。"
+      },
+      "languages": {
+        "title": "多言語対応",
+        "description": "英語、韓国語、中国語、日本語、スペイン語で完全にローカライズされたインターフェースで読書。"
+      },
+      "community": {
+        "title": "成長するコミュニティ",
+        "description": "古典文学を愛する世界中の読者に参加。"
+      },
+      "free": {
+        "title": "無料アクセス",
+        "description": "すべてのパブリックドメインの本は永久に無料。"
+      }
+    },
+    "publicDomain": {
+      "title": "パブリックドメインについて",
+      "content": "パブリックドメインの作品とは、知的財産権が失効、放棄、または適用されない作品です。つまり、これらの作品は許可や支払いなしに誰でも自由に使用、共有、楽しむことができます。"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "content": "ご意見をお聞かせください！ご質問、ご提案、または挨拶だけでも、お気軽にご連絡ください。"
+    }
+  },
+  "errors": {
+    "notFound": "ページが見つかりません",
+    "serverError": "問題が発生しました",
+    "unauthorized": "続けるにはログインしてください",
+    "forbidden": "このページにアクセスする権限がありません"
+  }
+}
