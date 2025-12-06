@@ -28,8 +28,6 @@ interface EpubReaderProps {
   title: string;
 }
 
-const MENU_HIDE_DELAY = 3000; // 3초 후 메뉴 자동 숨김
-
 export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
   const { initialCfi, saveProgress, isLoading: progressLoading } = useReadingProgress({ bookId });
   const { bookmarks, addBookmark, removeBookmark, updateBookmark, isBookmarked } = useBookmarks({ bookId });
@@ -42,18 +40,12 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
 
   // Zustand store
   const {
-    isMenuOpen,
-    setMenuOpen,
-    toggleMenu,
     isFullscreen,
     setFullscreen,
     settings: storeSettings,
     updateSettings: updateStoreSettings,
     getEffectiveTheme,
   } = useReaderStore();
-
-  // 메뉴 자동 숨김 타이머
-  const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // 텍스트 선택 상태
   const [selectedText, setSelectedText] = useState<{ cfiRange: string; text: string; position?: { x: number; y: number } } | null>(null);
@@ -115,35 +107,6 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
     highlights,
     onTextSelect: handleTextSelect,
   });
-
-  // 메뉴 자동 숨김 로직
-  const resetMenuTimer = useCallback(() => {
-    if (menuTimeoutRef.current) {
-      clearTimeout(menuTimeoutRef.current);
-    }
-    if (isMenuOpen) {
-      menuTimeoutRef.current = setTimeout(() => {
-        setMenuOpen(false);
-      }, MENU_HIDE_DELAY);
-    }
-  }, [isMenuOpen, setMenuOpen]);
-
-  // 메뉴 표시 시 타이머 시작
-  useEffect(() => {
-    resetMenuTimer();
-    return () => {
-      if (menuTimeoutRef.current) {
-        clearTimeout(menuTimeoutRef.current);
-      }
-    };
-  }, [isMenuOpen, resetMenuTimer]);
-
-  // 사용자 상호작용 시 타이머 리셋
-  const handleUserInteraction = useCallback(() => {
-    if (isMenuOpen) {
-      resetMenuTimer();
-    }
-  }, [isMenuOpen, resetMenuTimer]);
 
   // 도서 내 검색
   const {
@@ -270,8 +233,6 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
         case 'Escape':
           if (isFullscreen) {
             document.exitFullscreen?.();
-          } else {
-            setMenuOpen(false);
           }
           break;
         case 'f':
@@ -377,16 +338,9 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
   return (
     <div
       className={`h-screen flex flex-col ${themeStyles[effectiveTheme]} transition-colors duration-300`}
-      onMouseMove={handleUserInteraction}
     >
       {/* Header - Immersive Mode */}
-      <header
-        className={`
-          flex items-center justify-between px-4 py-2 border-b
-          transition-all duration-300 ease-in-out
-          ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}
-        `}
-      >
+      <header className="flex items-center justify-between px-4 py-2 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex items-center gap-2">
           <Link href={`/book/${bookId}`}>
             <Button variant="ghost" size="icon" aria-label="Back to book">
@@ -471,14 +425,6 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
         <div
           ref={containerRef}
           className="h-full w-full max-w-4xl mx-auto px-4 md:px-8 relative"
-          onClick={(e) => {
-            // 텍스트가 선택된 상태면 메뉴 토글하지 않음
-            const selection = window.getSelection();
-            if (selection && selection.toString().trim()) {
-              return;
-            }
-            toggleMenu();
-          }}
           {...swipeHandlers}
         />
 

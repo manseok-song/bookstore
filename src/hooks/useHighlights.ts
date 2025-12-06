@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useSession } from 'next-auth/react';
 import { toast } from 'sonner';
 
@@ -28,44 +28,89 @@ interface UseHighlightsReturn {
   getHighlightByCfi: (cfiRange: string) => HighlightData | undefined;
 }
 
+const getStorageKey = (bookId: string) => `highlights-${bookId}`;
+
+const loadFromStorage = (bookId: string): HighlightData[] => {
+  if (typeof window === 'undefined') return [];
+  try {
+    const stored = localStorage.getItem(getStorageKey(bookId));
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
+const saveToStorage = (bookId: string, highlights: HighlightData[]) => {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(getStorageKey(bookId), JSON.stringify(highlights));
+  } catch (error) {
+    console.error('Failed to save highlights to localStorage:', error);
+  }
+};
+
 export function useHighlights({ bookId }: UseHighlightsOptions): UseHighlightsReturn {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const [highlights, setHighlights] = useState<HighlightData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const initialLoadDone = useRef(false);
 
-  // 하이라이트 목록 로드
   useEffect(() => {
-    if (!session?.user) {
-      setIsLoading(false);
-      return;
+    if (initialLoadDone.current && highlights.length >= 0) {
+      saveToStorage(bookId, highlights);
     }
+  }, [highlights, bookId]);
 
+  useEffect(() => {
     const loadHighlights = async () => {
-      try {
-        const response = await fetch(`/api/user/highlights/${bookId}`);
-        if (response.ok) {
-          const data = await response.json();
-          setHighlights(data.data || []);
-        }
-      } catch (error) {
-        console.error('Failed to load highlights:', error);
-      } finally {
-        setIsLoading(false);
+      const localHighlights = loadFromStorage(bookId);
+      if (localHighlights.length > 0) {
+        setHighlights(localHighlights);
       }
+
+      if (status === 'loading') {
+        return;
+      }
+
+      if (session?.user) {
+        try {
+          const response = await fetch(`/api/user/highlights/${bookId}`);
+          if (response.ok) {
+            const data = await response.json();
+            const serverHighlights: HighlightData[] = data.data || [];
+
+            if (serverHighlights.length > 0) {
+              const mergedHighlights = [...serverHighlights];
+              const serverCfiRanges = new Set(serverHighlights.map(h => h.cfiRange));
+
+              for (const localH of localHighlights) {
+                if (!serverCfiRanges.has(localH.cfiRange) && localH.id.startsWith('local-')) {
+                  mergedHighlights.push(localH);
+                }
+              }
+
+              setHighlights(mergedHighlights);
+            } else if (localHighlights.length > 0) {
+              setHighlights(localHighlights);
+            }
+          }
+        } catch (error) {
+          console.error('Failed to load highlights from server:', error);
+        }
+      }
+
+      initialLoadDone.current = true;
+      setIsLoading(false);
     };
 
     loadHighlights();
-  }, [bookId, session]);
+  }, [bookId, session, status]);
 
-  // Optimistic UI: 하이라이트 추가
   const addHighlight = useCallback(
     async (cfiRange: string, text: string, color: HighlightColor = 'yellow', note?: string): Promise<HighlightData | null> => {
-      if (!session?.user) return null;
-
-      // Optimistic: 임시 ID로 먼저 UI에 추가
-      const tempId = `temp-${Date.now()}`;
-      const optimisticHighlight: HighlightData = {
-        id: tempId,
+      const localId = `local-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      const newHighlight: HighlightData = {
+        id: localId,
         cfiRange,
         text,
         color,
@@ -73,108 +118,100 @@ export function useHighlights({ bookId }: UseHighlightsOptions): UseHighlightsRe
         createdAt: new Date().toISOString(),
       };
 
-      setHighlights((prev) => [...prev, optimisticHighlight]);
+      setHighlights((prev) => [...prev, newHighlight]);
 
-      try {
-        const response = await fetch(`/api/user/highlights/${bookId}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ cfiRange, text, color, note }),
-        });
+      if (session?.user) {
+        try {
+          const response = await fetch(`/api/user/highlights/${bookId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ cfiRange, text, color, note }),
+          });
 
-        if (response.ok) {
-          const data = await response.json();
-          // 임시 하이라이트를 실제 데이터로 교체
-          setHighlights((prev) =>
-            prev.map((h) => (h.id === tempId ? data.data : h))
-          );
-          return data.data;
-        } else {
-          // 실패 시 롤백
-          setHighlights((prev) => prev.filter((h) => h.id !== tempId));
-          toast.error('Failed to save highlight');
-          return null;
+          if (response.ok) {
+            const data = await response.json();
+            setHighlights((prev) =>
+              prev.map((h) => (h.id === localId ? data.data : h))
+            );
+            toast.success('Highlight saved');
+            return data.data;
+          } else {
+            console.error('Server save failed, keeping local highlight');
+            toast.info('Saved locally');
+            return newHighlight;
+          }
+        } catch (error) {
+          console.error('Failed to add highlight to server:', error);
+          toast.info('Saved locally');
+          return newHighlight;
         }
-      } catch (error) {
-        // 에러 시 롤백
-        setHighlights((prev) => prev.filter((h) => h.id !== tempId));
-        toast.error('Failed to save highlight');
-        console.error('Failed to add highlight:', error);
-        return null;
+      } else {
+        toast.success('Highlight saved');
+        return newHighlight;
       }
     },
     [bookId, session]
   );
 
-  // Optimistic UI: 하이라이트 수정
   const updateHighlight = useCallback(
     async (id: string, updates: { note?: string; color?: HighlightColor }) => {
-      if (!session?.user) return;
-
-      // 이전 상태 저장 (롤백용)
       const previousHighlight = highlights.find((h) => h.id === id);
       if (!previousHighlight) return;
 
-      // Optimistic: 먼저 UI 업데이트
       setHighlights((prev) =>
         prev.map((h) => (h.id === id ? { ...h, ...updates } : h))
       );
 
-      try {
-        const response = await fetch(`/api/user/highlights/item/${id}`, {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(updates),
-        });
+      if (id.startsWith('local-')) {
+        return;
+      }
 
-        if (!response.ok) {
-          // 실패 시 롤백
-          setHighlights((prev) =>
-            prev.map((h) => (h.id === id ? previousHighlight : h))
-          );
-          toast.error('Failed to update highlight');
+      if (session?.user) {
+        try {
+          const response = await fetch(`/api/user/highlights/item/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updates),
+          });
+
+          if (!response.ok) {
+            console.error('Failed to update highlight on server');
+          }
+        } catch (error) {
+          console.error('Failed to update highlight:', error);
         }
-      } catch (error) {
-        // 에러 시 롤백
-        setHighlights((prev) =>
-          prev.map((h) => (h.id === id ? previousHighlight : h))
-        );
-        toast.error('Failed to update highlight');
-        console.error('Failed to update highlight:', error);
       }
     },
     [session, highlights]
   );
 
-  // Optimistic UI: 하이라이트 삭제
   const removeHighlight = useCallback(
     async (id: string) => {
-      if (!session?.user) return;
-
-      // 이전 상태 저장 (롤백용)
       const previousHighlight = highlights.find((h) => h.id === id);
       if (!previousHighlight) return;
 
-      // Optimistic: 먼저 UI에서 제거
       setHighlights((prev) => prev.filter((h) => h.id !== id));
+      toast.success('Highlight deleted');
 
-      try {
-        const response = await fetch(`/api/user/highlights/item/${id}`, {
-          method: 'DELETE',
-        });
+      if (id.startsWith('local-')) {
+        return;
+      }
 
-        if (!response.ok) {
-          // 실패 시 롤백
+      if (session?.user) {
+        try {
+          const response = await fetch(`/api/user/highlights/item/${id}`, {
+            method: 'DELETE',
+          });
+
+          if (!response.ok) {
+            setHighlights((prev) => [...prev, previousHighlight]);
+            toast.error('Failed to delete from server');
+          }
+        } catch (error) {
           setHighlights((prev) => [...prev, previousHighlight]);
-          toast.error('Failed to delete highlight');
-        } else {
-          toast.success('Highlight deleted');
+          toast.error('Failed to delete');
+          console.error('Failed to remove highlight:', error);
         }
-      } catch (error) {
-        // 에러 시 롤백
-        setHighlights((prev) => [...prev, previousHighlight]);
-        toast.error('Failed to delete highlight');
-        console.error('Failed to remove highlight:', error);
       }
     },
     [session, highlights]

@@ -4,8 +4,7 @@ import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { locales, type Locale } from '@/i18n/config';
 import { Providers } from '../providers';
-import { Header } from '@/components/layout';
-import { Footer } from '@/components/layout';
+import { LayoutWrapper } from '@/components/layout';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -38,11 +37,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
+            <LayoutWrapper>{children}</LayoutWrapper>
           </Providers>
         </NextIntlClientProvider>
       </body>
