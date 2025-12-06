@@ -292,17 +292,21 @@ export function TranslationPopup({
   );
 }
 
-// 사전 결과 팝업 컴포넌트
+// 사전 결과 팝업 컴포넌트 (다국어 지원)
 interface DictionaryPopupProps {
   word: string;
   definitions: Array<{
     partOfSpeech: string;
+    partOfSpeechTranslated?: string;
     definition: string;
+    definitionTranslated?: string;
     example?: string;
+    exampleTranslated?: string;
   }>;
   phonetic?: string;
   isLoading: boolean;
   error?: string;
+  targetLanguage?: string;
   onClose: () => void;
 }
 
@@ -312,8 +316,12 @@ export function DictionaryPopup({
   phonetic,
   isLoading,
   error,
+  targetLanguage,
   onClose,
 }: DictionaryPopupProps) {
+  // 번역된 정의가 있는지 확인
+  const hasTranslation = definitions.some(d => d.definitionTranslated);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onClose}>
       <div
@@ -349,14 +357,39 @@ export function DictionaryPopup({
           <div className="space-y-4">
             {definitions.map((def, index) => (
               <div key={index} className="border-l-2 border-primary pl-3">
+                {/* 품사 - 번역된 버전 우선 표시 */}
                 <p className="text-xs text-muted-foreground italic mb-1">
-                  {def.partOfSpeech}
+                  {def.partOfSpeechTranslated || def.partOfSpeech}
+                  {def.partOfSpeechTranslated && (
+                    <span className="text-muted-foreground/60 ml-1">
+                      ({def.partOfSpeech})
+                    </span>
+                  )}
                 </p>
-                <p className="text-sm">{def.definition}</p>
-                {def.example && (
-                  <p className="text-xs text-muted-foreground mt-1 italic">
-                    &ldquo;{def.example}&rdquo;
+
+                {/* 정의 - 번역된 버전 우선 표시 */}
+                <p className="text-sm">
+                  {def.definitionTranslated || def.definition}
+                </p>
+                {/* 번역된 경우 원본도 작게 표시 */}
+                {def.definitionTranslated && (
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {def.definition}
                   </p>
+                )}
+
+                {/* 예문 */}
+                {def.example && (
+                  <div className="mt-2 pl-2 border-l border-muted">
+                    <p className="text-xs text-muted-foreground italic">
+                      &ldquo;{def.exampleTranslated || def.example}&rdquo;
+                    </p>
+                    {def.exampleTranslated && (
+                      <p className="text-xs text-muted-foreground/60 italic mt-0.5">
+                        ({def.example})
+                      </p>
+                    )}
+                  </div>
                 )}
               </div>
             ))}

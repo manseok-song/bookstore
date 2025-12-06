@@ -19,8 +19,9 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Maximize, Minimize, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { translateText } from '@/lib/translate/client';
-import { lookupWord, type DictionaryResult } from '@/lib/dictionary/client';
+import { lookupWordWithTranslation, type DictionaryResult } from '@/lib/dictionary/client';
 
 interface EpubReaderProps {
   bookId: string;
@@ -29,6 +30,10 @@ interface EpubReaderProps {
 }
 
 export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
+  // 현재 로케일 가져오기
+  const params = useParams();
+  const locale = (params?.locale as string) || 'en';
+
   const { initialCfi, saveProgress, isLoading: progressLoading } = useReadingProgress({ bookId });
   const { bookmarks, addBookmark, removeBookmark, updateBookmark, isBookmarked } = useBookmarks({ bookId });
   const {
@@ -133,7 +138,7 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
     setShowHighlightPopup(true);
   }, []);
 
-  // 번역 기능
+  // 번역 기능 (사용자 언어로 번역)
   const handleTranslate = useCallback(async () => {
     if (!selectedText) return;
 
@@ -143,10 +148,10 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
     setTranslationResult(null);
 
     try {
-      // 사용자의 선호 언어로 번역 (기본값: 한국어)
+      // 사용자의 로케일로 번역
       const result = await translateText({
         text: selectedText.text,
-        targetLanguage: 'ko', // TODO: 사용자 설정에서 가져오기
+        targetLanguage: locale,
       });
       setTranslationResult({ text: result.translatedText });
     } catch (err) {
@@ -157,9 +162,9 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
     } finally {
       setIsTranslating(false);
     }
-  }, [selectedText]);
+  }, [selectedText, locale]);
 
-  // 사전 조회 기능
+  // 사전 조회 기능 (사용자 언어로 번역)
   const handleDictionary = useCallback(async () => {
     if (!selectedText) return;
 
@@ -170,14 +175,15 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
     setDictionaryError(null);
 
     try {
-      const result = await lookupWord(selectedText.text);
+      // 로케일에 맞춰 사전 정의 번역
+      const result = await lookupWordWithTranslation(selectedText.text, locale);
       setDictionaryResult(result);
     } catch (err) {
       setDictionaryError(err instanceof Error ? err.message : 'Lookup failed');
     } finally {
       setIsLookingUp(false);
     }
-  }, [selectedText]);
+  }, [selectedText, locale]);
 
   // 공유 기능 (SelectionMenu에서 처리됨)
   const handleShare = useCallback(() => {
@@ -459,7 +465,9 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
         <TranslationPopup
           originalText={selectedText.text}
           translatedText={translationResult?.text || ''}
-          targetLanguage="Korean"
+          targetLanguage={
+            { ko: 'Korean', ja: 'Japanese', zh: 'Chinese', es: 'Spanish', en: 'English' }[locale] || locale
+          }
           isLoading={isTranslating}
           error={translationResult?.error}
           onClose={() => {
@@ -477,6 +485,7 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
           phonetic={dictionaryResult?.phonetic}
           isLoading={isLookingUp}
           error={dictionaryError || undefined}
+          targetLanguage={locale}
           onClose={() => {
             setShowDictionary(false);
             setDictionaryResult(null);
