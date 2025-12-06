@@ -244,7 +244,7 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [goNext, goPrev, isFullscreen, setMenuOpen]);
+  }, [goNext, goPrev, isFullscreen]);
 
   // 전체화면 토글
   const toggleFullscreen = useCallback(async () => {
@@ -278,24 +278,6 @@ export function EpubReader({ bookId, epubUrl, title }: EpubReaderProps) {
     onSwipeRight: goPrev,
   });
 
-  // Tap Zone 핸들러 (좌 20%, 중앙 60%, 우 20%)
-  const handleTapZone = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const width = rect.width;
-    const relativeX = x / width;
-
-    if (relativeX < 0.2) {
-      // 좌측 20% - 이전 페이지
-      goPrev();
-    } else if (relativeX > 0.8) {
-      // 우측 20% - 다음 페이지
-      goNext();
-    } else {
-      // 중앙 60% - 메뉴 토글
-      toggleMenu();
-    }
-  }, [goPrev, goNext, toggleMenu]);
 
   // 테마 스타일
   const effectiveTheme = getEffectiveTheme();
